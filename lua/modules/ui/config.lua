@@ -393,6 +393,24 @@ function config.nvim_tree()
 		},
 	}
 
+    local mapping = {
+        { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+        { key = "<C-e>",                        action = "edit_in_place" },
+        { key = {"O"},                          action = "edit_no_picker" },
+        { key = {"<2-RightMouse>", "<C-]>"},    action = "cd" },
+        { key = "v",                            action = "vsplit" },
+        { key = "s",                            action = "split" },
+        { key = "R",                            action = "refresh" },
+        { key = "r",                            action = "rename" },
+        { key = "md",                           action = "remove" },  
+        { key = "d",                            action = "cut" },
+        { key = "c",                            action = "copy" },
+        { key = "p",                            action = "paste" },
+        { key = "I",                            action = "toggle_dotfiles" },
+        { key = "u",                            action = "dir_up" },
+        { key = "f",                            action = "live_filter" },
+    }
+
 	require("nvim-tree").setup({
 		auto_reload_on_write = true,
 		disable_netrw = false,
@@ -414,6 +432,10 @@ function config.nvim_tree()
 			relativenumber = false,
 			signcolumn = "yes",
 			hide_root_folder = false,
+            mappings = {
+                custom_only = true,
+                list = mapping,
+            }
 		},
 		renderer = {
 			indent_markers = {
