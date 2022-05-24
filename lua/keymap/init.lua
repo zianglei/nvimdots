@@ -7,10 +7,10 @@ require("keymap.config")
 local plug_map = {
 	-- Bufferline
 	["n|gb"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
-	["n|<A-j>"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
-	["n|<A-k>"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
-	["n|<A-S-j>"] = map_cr("BufferLineMoveNext"):with_noremap():with_silent(),
-	["n|<A-S-k>"] = map_cr("BufferLineMovePrev"):with_noremap():with_silent(),
+	["n|bn"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
+	["n|bp"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
+	-- ["n|<A-S-j>"] = map_cr("BufferLineMoveNext"):with_noremap():with_silent(),
+	-- ["n|<A-S-k>"] = map_cr("BufferLineMovePrev"):with_noremap():with_silent(),
 	["n|<leader>be"] = map_cr("BufferLineSortByExtension"):with_noremap(),
 	["n|<leader>bd"] = map_cr("BufferLineSortByDirectory"):with_noremap(),
 	["n|<A-1>"] = map_cr("BufferLineGoToBuffer 1"):with_noremap():with_silent(),
@@ -57,7 +57,7 @@ local plug_map = {
 	["n|<leader>cq"] = map_cr("TroubleToggle quickfix"):with_noremap():with_silent(),
 	["n|<leader>cl"] = map_cr("TroubleToggle loclist"):with_noremap():with_silent(),
 	-- Plugin nvim-tree
-	["n|<C-n>"] = map_cr("NvimTreeToggle"):with_noremap():with_silent(),
+	["n|<leader>nt"] = map_cr("NvimTreeToggle"):with_noremap():with_silent(),
 	["n|<Leader>nf"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent(),
 	["n|<Leader>nr"] = map_cr("NvimTreeRefresh"):with_noremap():with_silent(),
 	-- Plugin Aerial

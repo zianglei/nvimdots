@@ -27,8 +27,12 @@ function config.telescope()
 			selection_caret = " ",
 			entry_prefix = " ",
 			scroll_strategy = "limit",
-			results_title = false,
-			borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+	        borderchars = {                                                                                                                                                                  
+              preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },                                                                                                                          
+              prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },                                                                                                                           
+              results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" }                                                                                                                           
+            },
+            results_title = false,
 			layout_strategy = "horizontal",
 			path_display = { "absolute" },
 			file_ignore_patterns = {},
