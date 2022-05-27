@@ -447,6 +447,9 @@ function config.nvim_tree()
 				},
 			},
 		},
+        git = {
+            ignore = false,
+        },
 		hijack_directories = {
 			enable = true,
 			auto_open = true,

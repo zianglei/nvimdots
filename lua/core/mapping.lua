@@ -79,8 +79,12 @@ local def_map = {
 	["i|<M-J>"] = map_cmd("<Esc><C-w>j"):with_noremap(),
 	["i|<M-K>"] = map_cmd("<Esc><C-w>k"):with_noremap(),
 	["i|<M-L>"] = map_cmd("<Esc><C-w>l"):with_noremap(),
-
-
+    ["t|<M-H>"] = map_cmd("<C-\\><C-n><C-w>h"):with_noremap(),
+    ["t|<M-J>"] = map_cmd("<C-\\><C-n><C-w>j"):with_noremap(),
+    ["t|<M-K>"] = map_cmd("<C-\\><C-n><C-w>k"):with_noremap(),
+    ["t|<M-L>"] = map_cmd("<C-\\><C-n><C-w>l"):with_noremap(),
+    -- terminal 退出插入模式
+    ["t|<A-q>"] = map_cmd("<C-\\><C-n>"):with_noremap(),
 }
 
 bind.nvim_load_mapping(def_map)
