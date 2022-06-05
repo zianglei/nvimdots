@@ -7,8 +7,8 @@ require("keymap.config")
 local plug_map = {
 	-- Bufferline
 	["n|gb"] = map_cr("BufferLinePick"):with_noremap():with_silent(),
-	["n|bn"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
-	["n|bp"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
+	["n|<leader>bn"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent(),
+	["n|<leader>bp"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent(),
 	-- ["n|<A-S-j>"] = map_cr("BufferLineMoveNext"):with_noremap():with_silent(),
 	-- ["n|<A-S-k>"] = map_cr("BufferLineMovePrev"):with_noremap():with_silent(),
 	["n|<leader>be"] = map_cr("BufferLineSortByExtension"):with_noremap(),
@@ -69,10 +69,10 @@ local plug_map = {
 	["n|<Leader>fp"] = map_cu("lua require('telescope').extensions.project.project{}"):with_noremap():with_silent(),
 	["n|<Leader>fr"] = map_cu("lua require('telescope').extensions.frecency.frecency{}"):with_noremap():with_silent(),
 	["n|<Leader>fe"] = map_cu("Telescope oldfiles"):with_noremap():with_silent(),
-	["n|<Leader>ff"] = map_cu("Telescope find_files"):with_noremap():with_silent(),
+	["n|<Leader>ff"] = map_cu("lua local root, method = require('project_nvim.project').get_project_root(); vim.cmd('Telescope find_files no_ignore=true cwd=' .. root)"):with_noremap():with_silent(),
 	["n|<Leader>sc"] = map_cu("Telescope colorscheme"):with_noremap():with_silent(),
 	["n|<Leader>fn"] = map_cu(":enew"):with_noremap():with_silent(),
-	["n|<Leader>fw"] = map_cu("Telescope live_grep"):with_noremap():with_silent(),
+	["n|<Leader>fw"] = map_cu("lua local root, method = require('project_nvim.project').get_project_root(); vim.cmd('Telescope live_grep cwd=' .. root)"):with_noremap():with_silent(),
 	["n|<Leader>fg"] = map_cu("Telescope git_files"):with_noremap():with_silent(),
 	["n|<Leader>fz"] = map_cu("Telescope zoxide list"):with_noremap():with_silent(),
 	-- Plugin accelerate-jk

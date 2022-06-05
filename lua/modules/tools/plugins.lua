@@ -10,8 +10,7 @@ tools["nvim-telescope/telescope.nvim"] = {
 	requires = {
 		{ "nvim-lua/plenary.nvim", opt = false },
 		{ "nvim-lua/popup.nvim", opt = true },
-	},
-}
+	}, }
 tools["nvim-telescope/telescope-fzf-native.nvim"] = {
 	opt = true,
 	run = "make",
@@ -26,6 +25,11 @@ tools["nvim-telescope/telescope-frecency.nvim"] = {
 	after = "telescope-project.nvim",
 	requires = { { "tami5/sqlite.lua", opt = true } },
 }
+tools["nvim-telescope/telescope-file-browser.nvim"] = {
+    opt = true,
+    after = "telescope.nvim",
+}
+
 tools["jvgrootveld/telescope-zoxide"] = { opt = true, after = "telescope-frecency.nvim" }
 tools["michaelb/sniprun"] = {
 	opt = true,
@@ -51,6 +55,11 @@ tools["gelguy/wilder.nvim"] = {
 tools["nathom/filetype.nvim"] = {
 	opt = false,
 	config = conf.filetype,
+}
+
+tools["ahmedkhalf/project.nvim"] = {
+    opt = false,
+    config = conf.project,
 }
 
 return tools

@@ -67,9 +67,13 @@ function config.telescope()
 	})
 
 	require("telescope").load_extension("fzf")
-	require("telescope").load_extension("project")
 	require("telescope").load_extension("zoxide")
 	require("telescope").load_extension("frecency")
+  --  require("telescope").load_extension("projects")
+end
+
+function config.project()
+    require("project_nvim").setup {}
 end
 
 function config.trouble()

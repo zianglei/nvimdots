@@ -215,6 +215,8 @@ nvim_lsp.html.setup({
 	on_attach = custom_attach,
 })
 
+nvim_lsp.metals.setup({})
+
 local efmls = require("efmls-configs")
 
 -- Init `efm-langserver` here.
@@ -222,7 +224,7 @@ local efmls = require("efmls-configs")
 efmls.init({
 	on_attach = custom_attach,
 	capabilities = capabilities,
-	init_options = { documentFormatting = true, codeAction = true },
+	init_options = { documentFormatting = false, codeAction = true },
 })
 
 -- Require `efmls-configs-nvim`'s config here
