@@ -6,8 +6,8 @@ local map_cmd = bind.map_cmd
 -- default map
 local def_map = {
 	-- Vim map
-	["n|<Tab>"] = map_cr("normal zc"):with_noremap():with_silent(),
-	["n|<S-Tab>"] = map_cr("normal zo"):with_noremap():with_silent(),
+    --["n|<Tab>"] = map_cr("normal zc"):with_noremap():with_silent(),
+	--["n|<S-Tab>"] = map_cr("normal zo"):with_noremap():with_silent(),
 	["n|<C-x>k"] = map_cr("bdelete"):with_noremap():with_silent(),
 	["n|<C-s>"] = map_cu("write"):with_noremap(),
 	["n|Y"] = map_cmd("y$"),
@@ -75,6 +75,7 @@ local def_map = {
 	["n|<M-J>"] = map_cmd("<C-w>j"):with_noremap(),
 	["n|<M-K>"] = map_cmd("<C-w>k"):with_noremap(),
 	["n|<M-L>"] = map_cmd("<C-w>l"):with_noremap(),
+    -- For ipad
 	["i|<M-H>"] = map_cmd("<Esc><C-w>h"):with_noremap(),
 	["i|<M-J>"] = map_cmd("<Esc><C-w>j"):with_noremap(),
 	["i|<M-K>"] = map_cmd("<Esc><C-w>k"):with_noremap(),
